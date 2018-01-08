@@ -11,4 +11,10 @@ class Travel(models.Model):
         'auth.User',
         on_delete=models.CASCADE,
     )
+    def __str__(self):
+        """A string representation of the model."""
+        return self.destination[:50]
+
+    
+    
 

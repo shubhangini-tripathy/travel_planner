@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Travel
 
 
-from django.views.generic import TemplateView
-
-
-class HomePageView(TemplateView):
-    template_name = 'home1.html'
+class HomePageView(ListView):
+    model = Travel
+    template_name = 'travel.html'
