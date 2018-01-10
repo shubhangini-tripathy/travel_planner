@@ -9,8 +9,10 @@
 
   {% for travel in object_list %}
   <tr>
-    <td>{{travel.id}}</td>
-    <td>{{travel.destination}}</td>
+
+    <td>
+      <a href="{% url 'travel_detail' travel.pk %}">{{travel.destination}}</a>
+    </td>
     <td>{{travel.start_date}}</td>
     <td>{{travel.end_date}}</td>
   </tr>

@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<div class="travel-entry">
+    <h1>Travel Detail</h1>
+    <h2>{{ object.destination }}</h2>
+    <p>{{ object.start_date }}</p>
+    <p>{{ object.end_date }}</p>
+</div>
 
-{% block content %}
-  <div class="travel-entry">
-    <h2>{{ object.title }}</h2>
-    <p>{{ object.text }}</p>
-  </div>
 
-  
 {% endblock content %}
