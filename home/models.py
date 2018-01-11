@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 
@@ -15,6 +17,8 @@ class Travel(models.Model):
         """A string representation of the model."""
         return self.destination[:50]
 
-    
+    def get_absolute_url(self):
+        return reverse('home')
+
     
 

@@ -7,6 +7,8 @@ urlpatterns = [
     path('travel/<int:pk>/', views.TravelDetailView.as_view(), name='travel_detail'),
     path('travel/new/', views.TravelCreateView.as_view(), name='travel_new'),
     path('travel/<int:pk>/edit/',
-        views.BlogUpdateView.as_view(), name='travel_edit'),
+        views.TravelUpdateView.as_view(), name='travel_edit'),
+    path('travel/<int:pk>/delete/',
+        views.TravelDeleteView.as_view(), name='travel_delete'),
 
 ]

@@ -1,5 +1,8 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView , UpdateView
+from django.views.generic.edit import CreateView , UpdateView , DeleteView
+from django.urls import reverse_lazy
+
+
 from .models import Travel
 
 
@@ -19,7 +22,12 @@ class TravelCreateView(CreateView):
     fields = '__all__'
 
 
-class BlogUpdateView(UpdateView):
+class TravelUpdateView(UpdateView):
     model = Travel
     fields = ['destination','start_date','end_date']
     template_name = 'travel_edit.html'
+
+class TravelDeleteView(DeleteView):
+    model = Travel
+    template_name = 'travel_delete.html'
+    success_url = reverse_lazy('home')

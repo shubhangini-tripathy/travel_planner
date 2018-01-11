@@ -5,7 +5,9 @@
     <p>{{ object.start_date }}</p>
     <p>{{ object.end_date }}</p>
 </div>
-<a href= "{% url 'travel_edit' travel.pk %}">+ Edit Travel Plan</a>
+<p><a href= "{% url 'travel_edit' travel.pk %}">+ Edit Travel Plan</a></p>
+<p><a href="{% url 'travel_delete' travel.pk %}">+ Delete Travel Plan</a></p>
+
 {% endblock content %}
 
 
